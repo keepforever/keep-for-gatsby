@@ -1,11 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import styled from 'styled-components';
 
 import Header from '../components/header'
-import StyledComponent from '../components/StyledComponent'
 import './index.css'
 
+const Container = styled.div`
+  margin: 0 auto;
+  max-width: 960;
+  padding: 0px 1.0875rem 1.45rem;
+  paddingTop: 0;
+`
 const Layout = ({ children, data }) => (
   <div>
     <Helmet
@@ -16,8 +22,7 @@ const Layout = ({ children, data }) => (
       ]}
     />
     <Header siteTitle={data.site.siteMetadata.title} />
-    <StyledComponent word="fart" />
-    <div
+    <Container
       style={{
         margin: '0 auto',
         maxWidth: 960,
@@ -26,7 +31,7 @@ const Layout = ({ children, data }) => (
       }}
     >
       {children()}
-    </div>
+    </Container>
   </div>
 )
 

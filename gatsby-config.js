@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'KeepForever Records',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
