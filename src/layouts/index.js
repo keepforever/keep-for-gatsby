@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 import Header from '../components/header'
 import './index.css'
@@ -13,23 +13,45 @@ const Container = styled.div`
   max-width: 960;
   padding: 0px 1.0875rem 1.45rem;
 `
-const Layout = ({ children, data }) => (
-  <div>
-    <Helmet
-      title={data.site.siteMetadata.title}
-      meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
-      ]}
-    />
-    <Toolbar />
-    <SideDrawer open={true}/>
-    <Header siteTitle={data.site.siteMetadata.title} />
-    <Container>
-      {children()}
-    </Container>
-  </div>
-)
+class Layout extends Component {
+  state = {
+    showDrawer: false,
+  }
+  drawerToggleHandler = () => {
+    console.log("drawerToggleHandler clicked!")
+    this.setState(prevState => {
+      return {
+        showDrawer: !prevState.showDrawer,
+      }
+    })
+  }
+  render() {
+    const { children, data } = this.props
+    const { showDrawer} = this.state
+    // console.log("showDrawer", showDrawer)
+    return (
+      <div>
+        <Helmet
+          title={data.site.siteMetadata.title}
+          meta={[
+            { name: 'description', content: 'Sample' },
+            { name: 'keywords', content: 'sample, something' },
+          ]}
+        />
+        <Toolbar
+          open={showDrawer}
+          clicked={this.drawerToggleHandler}
+        />
+        <SideDrawer
+          clicked={this.drawerToggleHandler}
+          open={showDrawer}
+        />
+        <Header siteTitle={data.site.siteMetadata.title} />
+        <Container>{children()}</Container>
+      </div>
+    )
+  }
+}
 
 Layout.propTypes = {
   children: PropTypes.func,

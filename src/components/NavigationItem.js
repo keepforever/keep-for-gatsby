@@ -8,7 +8,7 @@ const NavItemLi = styled.li`
   display: block;
   width: 100%;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 
   a {
     color: #8f5c2c;
@@ -21,7 +21,7 @@ const NavItemLi = styled.li`
   a:hover,
   a:active,
   a.active {
-    color: #40a4c8;
+    color: red;
   }
 
   @media (min-width: 500px) {
@@ -41,8 +41,8 @@ const NavItemLi = styled.li`
     a:hover,
     a:active,
     a.active {
-      background-color: #8f5c2c;
-      border-bottom: 4px solid #40a4c8;
+      background-color: black;
+      border-bottom: 4px solid red;
       color: white;
     }
   }

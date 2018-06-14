@@ -15,7 +15,7 @@ const Toggle = styled.div`
   div {
     width: 90%;
     height: 3px;
-    background-color: white;
+    background-color: red;
   }
 
   @media (min-width: 500px) {
@@ -23,7 +23,7 @@ const Toggle = styled.div`
   }
 `
 
-const drawerToggle = props => (
+const DrawerToggle = props => (
   <Toggle onClick={props.clicked}>
     <div />
     <div />
@@ -31,4 +31,4 @@ const drawerToggle = props => (
   </Toggle>
 )
 
-export default drawerToggle
+export default DrawerToggle

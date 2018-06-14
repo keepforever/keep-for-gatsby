@@ -24,7 +24,7 @@ const UnorderList = styled.ul`
   flex-flow: column;
   align-items: center;
   height: 100%;
-  justify-content: center;
+  justify-content: flex-end;
 
   @media (min-width: 500px) {
     flex-flow: row;

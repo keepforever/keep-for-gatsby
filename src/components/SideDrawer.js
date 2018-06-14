@@ -15,7 +15,7 @@ const ContainerOpen = styled.div`
   background: black;
   padding: 32px 16px;
   box-sizing: border-box;
-  transition: transform 0.3s ease-out;
+  transition: transform 1s ease-out;
   @media (min-width: 500px) {
     display: none;
   }
@@ -32,7 +32,7 @@ const ContainerClosed = styled.div`
   background: black;
   padding: 32px 16px;
   box-sizing: border-box;
-  transition: transform 0.3s ease-out;
+  transition: transform 1s ease-out;
   @media (min-width: 500px) {
     display: none;
   }
@@ -40,24 +40,26 @@ const ContainerClosed = styled.div`
 `
 
 const sideDrawer = props => {
+  const {open, clicked} = props
   // to conditionally control side drawer classes
   let display = null
+  //console.log("SIDE_DRAWER props.open", props.open)
 
   if (props.open) {
     display = (
-      <ContainerOpen onClick={props.closed}>
+      <ContainerOpen onClick={clicked}>
         <div className="sidedrawer-logo">
           <div style={{ height: '72px', width: '72px' }}>Logo</div>
         </div>
         <nav>
-          <NavigationItems />
+          <NavigationItems  />
         </nav>
       </ContainerOpen>
     )
   } else {
     display = (
-      <ContainerClosed onClick={props.closed}>
-        <div className="sidedrawer-logo">
+      <ContainerClosed onClick={clicked}>
+        <div>
           <div style={{ height: '72px', width: '72px' }}>Logo</div>
         </div>
         <nav>
@@ -70,13 +72,10 @@ const sideDrawer = props => {
   // drawer whenever user clicks a link
   return (
     <div>
-      <Backdrop show={false} clicked={() => console.log('backdrop clicked!')} />
+      <Backdrop show={open} clicked={clicked} />
       {display}
     </div>
   )
 }
 
 export default sideDrawer
-
-//... want to conditionally assign classes hence it's a normal function body
-// before we return JSX
