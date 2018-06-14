@@ -11,7 +11,7 @@ const NavItemLi = styled.li`
   align-items: flex-end;
 
   a {
-    color: #8f5c2c;
+    color: white;
     text-decoration: none;
     width: 100%;
     box-sizing: border-box;
