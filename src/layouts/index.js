@@ -5,12 +5,13 @@ import styled from 'styled-components';
 
 import Header from '../components/header'
 import './index.css'
+import Toolbar from '../components/Toolbar'
+import SideDrawer from '../components/SideDrawer'
 
 const Container = styled.div`
   margin: 0 auto;
   max-width: 960;
   padding: 0px 1.0875rem 1.45rem;
-  paddingTop: 0;
 `
 const Layout = ({ children, data }) => (
   <div>
@@ -21,15 +22,10 @@ const Layout = ({ children, data }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
+    <Toolbar />
+    <SideDrawer open={true}/>
     <Header siteTitle={data.site.siteMetadata.title} />
-    <Container
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
+    <Container>
       {children()}
     </Container>
   </div>
