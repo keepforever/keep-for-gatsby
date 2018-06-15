@@ -14,6 +14,11 @@ const routes = [
     exact: true,
     name: 'About',
   },
+  {
+    path: '/blog',
+    exact: true,
+    name: 'Blog'
+  }
 ]
 
 const UnorderList = styled.ul`
