@@ -10,9 +10,9 @@ const routes = [
     name: 'Home',
   },
   {
-    path: '/page-2/',
+    path: '/song-list/',
     exact: true,
-    name: 'About',
+    name: 'Songs',
   },
   {
     path: '/blog',
