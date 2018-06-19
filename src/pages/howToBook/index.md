@@ -5,5 +5,5 @@ title: "How to Book Me"
 author: "KeepForever"
 ---
 
-Navigate to Info Tab and enter "showmethemoney" into the
+Navigate to Info Tab and enter "purpledog" into the
 secret password input and my email will be revealed.
