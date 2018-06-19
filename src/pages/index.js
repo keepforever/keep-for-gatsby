@@ -52,21 +52,20 @@ const Anchor = styled.a`
     color: red;
   }
 `
-
 const BannerImage = styled.img`
   border-radius: 100px;
-  height: 80%;
-  width: 80%;
+  height: 90%;
+  width: 90%;
 `
 const IndexPage = () => (
   <Container>
     <BannerImage src={kfBanner} alt="something is wrong" />
-    <H2>Recordings: </H2>
+    <H2>Original Records: </H2>
     <Anchor target="_blank" href={readyToGoYoutube}>
-      Ready to Go (Original)
+      Ready to Go
     </Anchor>
     <Anchor target="_blank" href={pleaseDontKeepMeWaitingYoutube}>
-      Please Don't Keep Me Waiting (Original)
+      Please Don't Keep Me Waiting
     </Anchor>
     <hr />
     <H2>Live Demos: </H2>

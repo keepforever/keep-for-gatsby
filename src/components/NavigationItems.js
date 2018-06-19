@@ -12,7 +12,7 @@ const routes = [
   {
     path: '/song-list/',
     exact: true,
-    name: 'Songs',
+    name: 'Song List',
   },
   {
     path: '/blog',
