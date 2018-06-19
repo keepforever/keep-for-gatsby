@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Link from 'gatsby-link'
-import { songStrings, songFunction } from './songs'
+import { songStrings, songFunction } from '../assets/songs'
 
 import styled from 'styled-components'
 
