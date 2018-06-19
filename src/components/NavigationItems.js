@@ -17,7 +17,7 @@ const routes = [
   {
     path: '/blog',
     exact: true,
-    name: 'Blog'
+    name: 'Info'
   }
 ]
 

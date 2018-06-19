@@ -1,8 +1,8 @@
 ---
-path: "/post-one"
-date: "2018-06-14"
-title: "Poo Errywhur"
-author: "Brian Cilenti"
+path: "/what-i-do"
+date: "June 19th 2018"
+title: "What I do"
+author: "Brian"
 ---
 
-This is my **second** blog post in Gatsby
+What I do

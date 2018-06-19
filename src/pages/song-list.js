@@ -4,31 +4,6 @@ import { songStrings, songFunction } from './songs'
 
 import styled from 'styled-components'
 
-const Container = styled.div`
-  margin-left: 15%;
-  margin-right: 15%;
-  @media(max-width: 500px) {
-    margin-left: 0%;
-    margin-right: 0%;
-  }
-`
-
-const Input = styled.input`
- height: 50px;
- width: 100%;
- border-bottom: '2px solid blue';
- margin: 10;
- border: 'none';
- font-size: 22;
-`
-const UnorderedList = styled.ul`
-  list-style: none;
-  margin-left: 0;
-  margin-top: 15px;
-`
-const ListItem = styled.li`
-  display: block;
-`
 class SecondPage extends Component {
   state = {
     filter: '',
@@ -55,6 +30,7 @@ class SecondPage extends Component {
         <h1>Songs I Sing</h1>
         <div>Search Title or Artist {"  "}: {"  "}
           <Input
+            placeholder="Search for song or Artist..."
             value={this.state.filter}
             onChange={evt => this.onChange('filter', evt.target.value)}
           />
@@ -63,7 +39,7 @@ class SecondPage extends Component {
           {filterdSongs.map((song, index) => {
             return (
               <ListItem key={index}>
-                "{song.title}" by {song.artist}
+                "{song.title}" by <strong>{song.artist}</strong>
                 <hr />
               </ListItem>
             )
@@ -75,3 +51,28 @@ class SecondPage extends Component {
 }
 
 export default SecondPage
+
+const Container = styled.div`
+  margin-left: 15%;
+  margin-right: 15%;
+  @media(max-width: 500px) {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+`
+const Input = styled.input`
+ height: 50px;
+ width: 100%;
+ border-bottom: '2px solid blue';
+ margin: 10;
+ border: 'none';
+ font-size: 22;
+`
+const UnorderedList = styled.ul`
+  list-style: none;
+  margin-left: 0;
+  margin-top: 15px;
+`
+const ListItem = styled.li`
+  display: block;
+`

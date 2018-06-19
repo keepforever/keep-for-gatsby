@@ -6,6 +6,7 @@
  const Container = styled.div`
    margin-left: 15%;
    margin-right: 15%;
+   margin-top: 76px;
    @media(max-width: 500px) {
      margin-left: 0%;
      margin-right: 0%;
@@ -19,7 +20,6 @@
    //console.log('posts', posts[0].node.excerpt)
    return (
      <Container>
-       <h1>Latest Posts </h1>
        {posts.map((post, index) => {
          return (
            <div key={post.node.id}>

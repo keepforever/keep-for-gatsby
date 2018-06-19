@@ -11,12 +11,23 @@ const readyToGoYoutube = 'https://youtu.be/7s7NzQTg9NM'
 const pleaseDontKeepMeWaitingYoutube = 'https://youtu.be/cRl0iPXaTSI'
 const fullBandCovers =
   'https://soundcloud.com/keep-forever/sets/live-performances'
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   padding: 10px 0;
+  margin-right: 15%;
+  margin-left: 15%;
+  @media (max-width: 500px) {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  @media (max-width: 400px) {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
 `
 const H2 = styled.h2`
   display: flex;
@@ -58,7 +69,7 @@ const IndexPage = () => (
       Please Don't Keep Me Waiting (Original)
     </Anchor>
     <hr />
-    <H2>Live: </H2>
+    <H2>Live Demos: </H2>
     <Anchor target="_blank" href={soundCloudAcoustic}>
       Acoustic Covers
     </Anchor>
