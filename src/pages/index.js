@@ -7,8 +7,8 @@ import styled from 'styled-components'
 
 const soundCloudAcoustic =
   'https://soundcloud.com/keep-forever/sets/noahs-studio-san-francisco'
-const readyToGoYoutube = 'https://youtu.be/7s7NzQTg9NM'
-const pleaseDontKeepMeWaitingYoutube = 'https://youtu.be/cRl0iPXaTSI'
+const readyToGoYoutube = 'https://youtu.be/cRl0iPXaTSI'
+const pleaseDontKeepMeWaitingYoutube = 'https://youtu.be/7s7NzQTg9NM'
 const fullBandCovers =
   'https://soundcloud.com/keep-forever/sets/live-performances'
 
